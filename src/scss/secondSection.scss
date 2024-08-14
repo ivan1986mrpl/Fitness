@@ -1,0 +1,41 @@
+.trainers {
+
+    &__container {
+        @include adaptiveValue("padding-top", 150, 70);
+        @include adaptiveValue("padding-bottom", 150, 40);
+
+    }
+
+    &__header {
+        margin: 0 auto;
+        @include adaptiveValue("padding-bottom", 50, 25);
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: toRem(30);
+        row-gap: toRem(30);
+    }
+
+    &__item {
+        border-radius: 20px;
+        width: 268px;
+        height: 400px;
+        @media (max-width: toEm(585)){
+              flex: 0.1 100%;
+        }
+    }
+
+    &__descr {/* 1.32- */
+        font-family: $secondFontFamily;
+        //font-weight: 700;
+        @include adaptiveValue("font-size", 42, 30);
+    }
+
+    &__image {
+    }
+}
+
+

@@ -1,0 +1,77 @@
+.page {
+
+    &__hero {
+    }
+}
+.hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    &__container {
+        position: relative;
+        z-index: 2;
+        flex: 1 1 auto;
+        @include adaptiveValue("padding-top", 236, 85);
+        @include adaptiveValue("padding-bottom", 182, 40);
+        display: flex;
+        justify-content: end;
+    }
+
+    &__logo {
+        @include adaptiveValue("width", 526, 250);
+		img {
+			max-width: 100%;
+		}
+    }
+
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            @media (max-width: toEm(1050)){
+                  object-position: left;
+            }
+        }
+    }
+}
+
+
+/* 
+.main-block {
+    min-height: 100vh;//на всю высоту
+    position: relative;
+    display: flex;
+    &__container {//падинги задавать контейнеру
+        position: relative;
+        z-index: 2;
+        flex: 1 1 auto;//чтобы растянулся на всю высоту родителя
+    }
+    &__image {//при position: relative; у .main-block делает изображение фоном
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        //background-color: #000;//для читаемости при адаптиве
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+            @media (max-width: 43.75em) {//для читаемости при адаптиве
+                opacity: 0.6;
+            }
+        }
+    }
+} */
